@@ -26,6 +26,8 @@ public class MyRunnable implements Runnable {
                 end = Instant.now();
                 Duration timeElapsed = Duration.between(start, end);
                 System.out.println("loop: " + numLoops + " latency: "+ timeElapsed.toMillis() +" milliseconds");
+                // throughput = numthreads/latency
+                // will be calculated afterwards
                 start = end;
                 numLoops++;
             }
